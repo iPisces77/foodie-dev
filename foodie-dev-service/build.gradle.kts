@@ -1,7 +1,12 @@
-plugins {
-    //模块需要其他插件, 在这里写
-}
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
+group = "com.ipisces42"
+version = "0.0.1"
+tasks.named<BootJar>("bootJar") {
+    isEnabled = false
+
+}
 dependencies {
     //模块需要其他第三方库, 在这里写
+    implementation(project(":foodie-dev-mapper"))
 }
